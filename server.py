@@ -128,6 +128,7 @@ def api_filter():
     query = query[:-4] + ';'
 
     conn = create_connection('books.db')
+    conn.row_factory = dict_factory
     c = conn.cursor()
     results = c.execute(query, to_filter).fetchall()
 
