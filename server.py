@@ -67,7 +67,7 @@ def dict_factory(cursor, row):
     return d
 
 
-def main():
+def db_main():
     database = './books.db'
     conn = create_connection(database)
     if conn is not None:
@@ -140,5 +140,5 @@ def page_not_found(e):
 
 
 if __name__ == "__main__":
-    main()
+    db_main()
     app.run()
